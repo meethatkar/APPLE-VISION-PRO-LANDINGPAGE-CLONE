@@ -1,72 +1,72 @@
-function locomotive(){
-    gsap.registerPlugin(ScrollTrigger);
+function locomotive() {
+  gsap.registerPlugin(ScrollTrigger);
 
-// Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
+  // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
 
-const locoScroll = new LocomotiveScroll({
-  el: document.querySelector("#main"),
-  smooth: true
-});
-// each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
-locoScroll.on("scroll", ScrollTrigger.update);
+  const locoScroll = new LocomotiveScroll({
+    el: document.querySelector("#main"),
+    smooth: true
+  });
+  // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
+  locoScroll.on("scroll", ScrollTrigger.update);
 
-// tell ScrollTrigger to use these proxy methods for the "#main" element since Locomotive Scroll is hijacking things
-ScrollTrigger.scrollerProxy("#main", {
-  scrollTop(value) {
-    return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-  }, // we don't have to define a scrollLeft because we're only scrolling vertically.
-  getBoundingClientRect() {
-    return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
-  },
-  // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
-  pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
-});
+  // tell ScrollTrigger to use these proxy methods for the "#main" element since Locomotive Scroll is hijacking things
+  ScrollTrigger.scrollerProxy("#main", {
+    scrollTop(value) {
+      return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+    }, // we don't have to define a scrollLeft because we're only scrolling vertically.
+    getBoundingClientRect() {
+      return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+    },
+    // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
+    pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
+  });
 
 
-// each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
-ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+  // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
+  ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
-// after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
-ScrollTrigger.refresh();
+  // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
+  ScrollTrigger.refresh();
 
 }
 
 locomotive();
 
-gsap.to("#page-0>video",{
-  scrollTrigger:{
+gsap.to("#page-0>video", {
+  scrollTrigger: {
     trigger: "#page-0>video",
     scroller: "#main",
     start: "1% top",
     end: "bottom top",
     // markers: true,
   },
-  onStart:()=>{
+  onStart: () => {
     document.querySelector("#page-0>video").play();   //pale vidoe as soon as the gsap start is met
   }
 })
 
 //for pinning page-0
-gsap.to("#page-0",{
-  scrollTrigger:{
-    trigger:"#page-0",
-    scroller:"#main",
+gsap.to("#page-0", {
+  scrollTrigger: {
+    trigger: "#page-0",
+    scroller: "#main",
     start: "top top",
     end: "bottom top",
-    pin:true,
+    pin: true,
   }
 })
 
 
 //page-0 text 
-gsap.to("#text-btm",{
-  scrollTrigger:{
-    trigger:"#page-0>video",
-    scroller:"#main",
-    start:"1% top",
-    end:"bottom top"
+gsap.to("#text-btm", {
+  scrollTrigger: {
+    trigger: "#page-0>video",
+    scroller: "#main",
+    start: "1% top",
+    end: "bottom top"
   },
-  onStart:()=>{
+  onStart: () => {
     let textBtmDiv = document.querySelector("#text-btm");
     textBtmDiv.style.opacity = "0";
     // textBtmDiv.style.width = "0%";
@@ -78,66 +78,66 @@ gsap.to("#text-btm",{
 // GSAP timeline works like function, in which we write scrollTrigger animation whihc we are going to use multiple time.
 
 let t1 = gsap.timeline({
-  scrollTrigger:{
+  scrollTrigger: {
     trigger: "#page-1",
-    start:"top top",
+    start: "top top",
     // end:"top bottom",
-    scrub:1,
-    scroller:"#main",
-    pin:true,
+    scrub: 1,
+    scroller: "#main",
+    pin: true,
   }
 })
 
-t1.to("#page-1>h1",{
+t1.to("#page-1>h1", {
   top: "-30%"
 })
 
 let t2 = gsap.timeline({
-  scrollTrigger:{
+  scrollTrigger: {
     trigger: "#page-2",
-    start:"top top",
+    start: "top top",
     // end:"top bottom",
-    scrub:1,
-    scroller:"#main",
-    pin:true,
+    scrub: 1,
+    scroller: "#main",
+    pin: true,
   }
 })
 
-t2.to("#page-2>h1",{
+t2.to("#page-2>h1", {
   top: "-30%"
 })
 
 let t3 = gsap.timeline({
-  scrollTrigger:{
+  scrollTrigger: {
     trigger: "#page-4",
-    start:"top top",
+    start: "top top",
     // end:"top bottom",
-    scrub:1,
-    scroller:"#main",
-    pin:true,
+    scrub: 1,
+    scroller: "#main",
+    pin: true,
   }
 })
 
-t3.to("#page-4>h1",{
+t3.to("#page-4>h1", {
   top: "-30%"
 })
 
-function canvas(){
-    const canvas = document.querySelector("#page-7>canvas");
-const context = canvas.getContext("2d");
+function canvas() {
+  const canvas = document.querySelector("#page-7>canvas");
+  const context = canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-
-window.addEventListener("resize", function () {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-  render();
-});
 
-function files(index) {
-  var data = `
+
+  window.addEventListener("resize", function () {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    render();
+  });
+
+  function files(index) {
+    var data = `
   https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/360/large/0000.jpg
   https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/360/large/0001.jpg
   https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/360/large/0002.jpg
@@ -338,72 +338,170 @@ function files(index) {
   https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/360/large/0198.jpg
   https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/360/large/0199.jpg
  `;
-  return data.split("\n")[index];
-}
+    return data.split("\n")[index];
+  }
 
-const frameCount = 198;
+  const frameCount = 198;
 
-const images = [];
-const imageSeq = {
-  frame: 1,
-};
+  const images = [];
+  const imageSeq = {
+    frame: 1,
+  };
 
-for (let i = 0; i < frameCount; i++) {
-  const img = new Image();
-  img.src = files(i);
-  images.push(img);
-}
+  for (let i = 0; i < frameCount; i++) {
+    const img = new Image();
+    img.src = files(i);
+    images.push(img);
+  }
 
-gsap.to(imageSeq, {
-  frame: frameCount - 1,
-  snap: "frame",
-  ease: `none`,
-  scrollTrigger: {
-    scrub: 0.15,
-    trigger: `#page-7>canvas`,
+  gsap.to(imageSeq, {
+    frame: frameCount - 1,
+    snap: "frame",
+    ease: `none`,
+    scrollTrigger: {
+      scrub: 0.15,
+      trigger: `#page-7>canvas`,
+      //   set start end according to preference
+      start: `top top`,
+      end: `600% top`,
+      scroller: `#main`,
+    },
+    onUpdate: render,
+  });
+
+  images[1].onload = render;
+
+  function render() {
+    scaleImage(images[imageSeq.frame], context);
+  }
+
+  function scaleImage(img, ctx) {
+    var canvas = ctx.canvas;
+    var hRatio = canvas.width / img.width;
+    var vRatio = canvas.height / img.height;
+    var ratio = Math.min(hRatio, vRatio);
+    var centerShift_x = (canvas.width - img.width * ratio) / 2;
+    var centerShift_y = (canvas.height - img.height * ratio) / 2;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(
+      img,
+      0,
+      0,
+      img.width,
+      img.height,
+      centerShift_x,
+      centerShift_y,
+      img.width * ratio,
+      img.height * ratio
+    );
+  }
+  ScrollTrigger.create({
+
+    trigger: "#page-7>canvas",
+    pin: true,
+    // markers:true,
+    scroller: `#main`,
     //   set start end according to preference
     start: `top top`,
     end: `600% top`,
+  });
+}
+
+// PAGE 17 
+function canvas1() {
+  const canvas = document.querySelector("#page-17>canvas");
+  const context = canvas.getContext("2d");
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+
+  window.addEventListener("resize", function () {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    render();
+  });
+
+  function files(index) {
+    var data = []
+    for (let i = 1; i <= 25; i++) {
+      if (i <= 9) {
+        data.push(`assets/Apple vision canvas images/Vision0000${i}.png`);
+      }
+      else if (i >= 10) {
+        data.push(`assets/Apple vision canvas images/Vision000${i}.png`);
+      }
+    }
+    return data[index];
+  }
+
+  const frameCount = 25;
+
+  const images = [];
+  const imageSeq = {
+    frame: 1,
+  };
+
+  for (let i = 0; i < frameCount; i++) {
+    const img = new Image();
+    img.src = files(i);
+    images.push(img);
+  }
+
+  gsap.to(imageSeq, {
+    frame: frameCount - 1,
+    snap: "frame",
+    ease: `none`,
+    scrollTrigger: {
+      scrub: 0.15,
+      trigger: `#page-17>canvas`,
+      // markers:true,
+      //   set start end according to preference
+      start: `top top`,
+      end: `125% top`,
+      scroller: `#main`,
+    },
+    onUpdate: render,
+  });
+
+  images[1].onload = render;
+
+  function render() {
+    scaleImage(images[imageSeq.frame], context);
+  }
+
+  function scaleImage(img, ctx) {
+    var canvas = ctx.canvas;
+    var hRatio = canvas.width / img.width;
+    var vRatio = canvas.height / img.height;
+    var ratio = Math.min(hRatio, vRatio);
+    var centerShift_x = (canvas.width - img.width * ratio) / 2;
+    var centerShift_y = (canvas.height - img.height * ratio) / 2;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(
+      img,
+      0,
+      0,
+      img.width,
+      img.height,
+      centerShift_x,
+      centerShift_y,
+      img.width * ratio,
+      img.height * ratio
+    );
+  }
+  ScrollTrigger.create({
+
+    trigger: "#page-17>canvas",
+    pin: true,
+    // markers:true,
     scroller: `#main`,
-  },
-  onUpdate: render,
-});
-
-images[1].onload = render;
-
-function render() {
-  scaleImage(images[imageSeq.frame], context);
+    //   set start end according to preference
+    start: `top top`,
+    end: `600% top`,
+  });
 }
 
-function scaleImage(img, ctx) {
-  var canvas = ctx.canvas;
-  var hRatio = canvas.width / img.width;
-  var vRatio = canvas.height / img.height;
-  var ratio = Math.min(hRatio, vRatio);
-  var centerShift_x = (canvas.width - img.width * ratio) / 2;
-  var centerShift_y = (canvas.height - img.height * ratio) / 2;
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.drawImage(
-    img,
-    0,
-    0,
-    img.width,
-    img.height,
-    centerShift_x,
-    centerShift_y,
-    img.width * ratio,
-    img.height * ratio
-  );
-}
-ScrollTrigger.create({
 
-  trigger: "#page-7>canvas",
-  pin: true,
-  // markers:true,
-  scroller: `#main`,
-//   set start end according to preference
-  start: `top top`,
-  end: `600% top`,
-});
-}
 canvas();
+canvas1();
