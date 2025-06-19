@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APPLE VISION PRO CLONE </title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+</head>
+<body class="h-[100%] w-[100%]">
+    <div id="main" class="relative overflow-hidden">
+        <div id="page-0" class="h-[100vh] w-[100vw] bg-black">
+            <nav class="absolute top-0 left-[50%] -translate-x-1/2 h-[10vh] w-7/12 text-white flex items-center justify-between px-10 font-sans z-2">
+                <h1 class="font-medium text-2xl"> Vision Pro </h1>
+                <button class="px-4 py-1 bg-white text-black rounded-full font-medium"> Notify me </button>
+            </nav>
+            <video src="assets/home_bg.mp4" class="h-[100vh] w-[50vw] absolute left-[50%] -translate-x-1/2 z-1 object-cover" muted></video>
+            <div id="text-btm" class="text-gray-500 absolute top-[75%] left-[50%] -translate-x-1/2 z-3 flex items-center gap-5 opacity-100 transition-all ease-linear duration-500">
+                <img src="assets/logo-text.png" alt="" class="invert h-15">
+                <h3 class="font-medium text-5xl">Introduction... </h3>
+            </div>
+        </div>
+        <div id="page-1" class="h-[100vh] w-[100vw] flex flex-col items-center relative">
+            <h1 class="absolute top-[95%] z-3 text-white font-medium text-5xl"> Welcome to the era of spatial computing </h1>
+            <video src="assets/page-2.mp4" class="h-[100%] w-[100%] object-cover" autoplay loop muted></video>
+        </div>
+        <div id="page-2" class="h-[100vh] w-[100vw] relative flex flex-col items-center">
+            <h1 class="absolute text-white text-5xl font-medium top-[80%] text-center">Apple Vision Pro seamlessly blends  <br>  digital content with your physical space. </h1>
+            <video src="assets/page-3.mp4" class="h[100%] w-[100%] object-cover" autoplay loop muted></video>
+        </div>
+        <div id="page-3" class="h-[100vh] w-[100vw] relative">
+            <div id="p-3-wrapper" class="h-[100%] w-[100%] flex flex-col items-center absolute top-1/2">
+                <div id="upper-text">
+                <p> watch the film </p>
+                <p> watch the event </p>
+            </div>
+            <img src="assets/Apple vision image.png" alt="" class="h-1/2">
+            <button>+ Take a closer look at Vision Pro </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- GSAP  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- LOCOMOTIVE JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <!-- LOCOMOTIVE JS -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
