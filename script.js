@@ -33,6 +33,8 @@ function locomotive() {
 
 locomotive();
 
+// PLAY VIDEO ON VIEWPORT ENTRY 
+
 gsap.to("#page-0>video", {
   scrollTrigger: {
     trigger: "#page-0>video",
@@ -43,6 +45,47 @@ gsap.to("#page-0>video", {
   },
   onStart: () => {
     document.querySelector("#page-0>video").play();   //pale vidoe as soon as the gsap start is met
+  }
+})
+
+gsap.to("#page-1>video", {
+  scrollTrigger: {
+    trigger: "#page-1>video",
+    scroller: "#main",
+    start: "top top",
+    // markers: true
+  },
+  onStart: () => {
+    document.querySelector("#page-1>video").play();
+    document.querySelector("#page-1>video").autoplay = true;
+  }
+})
+
+gsap.to("#page-4>video", {
+  scrollTrigger: {
+    trigger: "#page-4>video",
+    scroller: "#main",
+    start: "250% top",
+    end: "400% top",
+    // markers: true
+  },
+  onStart: () => {
+    document.querySelector("#page-4>video").play();
+    document.querySelector("#page-4>video").autoplay = true;
+  }
+})
+
+gsap.to("#page-14>video", {
+  scrollTrigger: {
+    trigger: "#page-14>video",
+    scroller: "#main",
+    start: "380% top",
+    end: "450% top",
+    // markers: true,
+  },
+  onStart: () => {
+    document.querySelector("#page-14>video").play();
+    document.querySelector("#page-14>video").autoplay = true;
   }
 })
 
@@ -121,6 +164,90 @@ let t3 = gsap.timeline({
 t3.to("#page-4>h1", {
   top: "-30%"
 })
+
+// page 19 on off effect
+let t4 = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#page-19",
+    start: "100% top",
+    end: "110% top",
+    // markers: true,
+    scroller: "#main",
+    scrub: 1,
+  }
+})
+
+t4.to("#p19-off", {
+  opacity: "0",
+})
+
+
+//page 20 effect
+gsap.to("#p20-1", {
+  scrollTrigger: {
+    scroller: "#main",
+    trigger: "#p20-1",
+    start: "200% 50%",
+    end: "210% 35%",
+    scrub: 1,
+    // markers: true,
+  },
+  opacity: "0",
+})
+gsap.to("#p20-2", {
+  scrollTrigger: {
+    scroller: "#main",
+    trigger: "#p20-2",
+    start: "200% 35%",
+    end: "210% 20%",
+    scrub: 1,
+    // markers: true,
+  },
+  opacity: "0",
+})
+
+// page-21 effect
+gsap.to("#page-21>img", {
+  scrollTrigger: {
+    trigger: "#page-21>img",
+    scroller: "#main",
+    start: "100% 80%",
+    end: "110% 15%",
+    scrub: 1,
+    // markers: true,
+  },
+  opacity: "1",
+  scale: "1.5"
+})
+
+// CUSTOM EFFECTS
+gsap.to("#page-14>img", {
+  scrollTrigger: {
+    trigger: "#page-14>img",
+    scroller: "#main",
+    start: "top 30%",
+    end: "top top",
+    // markers: true,
+    scrub: 1
+  },
+  opacity: "1",
+  scale: "1",
+})
+
+gsap.to("#page-16>img", {
+  scrollTrigger: {
+    trigger: "#page-16>img",
+    scroller: "#main",
+    start: "top 85%",
+    end: "top 40%",
+    // markers:true,
+    scrub: 0.5
+  },
+  opacity: "1",
+})
+
+
+
 
 function canvas() {
   const canvas = document.querySelector("#page-7>canvas");
@@ -498,10 +625,9 @@ function canvas1() {
     scroller: `#main`,
     //   set start end according to preference
     start: `top top`,
-    end: `600% top`,
+    end: `125% top`,
   });
 }
-
 
 canvas();
 canvas1();

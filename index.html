@@ -10,98 +10,168 @@
 </head>
 
 <body class="h-[100%] w-[100%]">
-    <div id="main" class="relative overflow-hidden">
+    <div id="main" class="relative overflow-hidden font-sans">
+        <!-- PAGE 0 -->
         <div id="page-0" class="h-[100vh] w-[100vw] bg-black">
-            <nav class="absolute top-0 left-[50%] -translate-x-1/2 h-[10vh] w-7/12 text-white flex items-center justify-between px-10 font-sans z-2">
+            <nav
+                class="absolute top-0 left-[50%] -translate-x-1/2 h-[10vh] w-7/12 text-white flex items-center justify-between px-10 font-sans z-2">
                 <h1 class="font-medium text-2xl"> Vision Pro </h1>
                 <button class="px-4 py-1 bg-white text-black rounded-full font-medium"> Notify me </button>
             </nav>
-            <video src="assets/home_bg.mp4" class="h-[100vh] w-[50vw] absolute left-[50%] -translate-x-1/2 z-1 object-cover" muted></video>
-            <div id="text-btm" class="text-gray-500 absolute top-[75%] left-[50%] -translate-x-1/2 z-3 flex items-center gap-5 opacity-100 transition-all ease-linear duration-500">
+            <video src="assets/home_bg.mp4"
+                class="h-[100vh] w-[50vw] absolute left-[50%] -translate-x-1/2 z-1 object-cover" muted></video>
+            <div id="text-btm"
+                class="text-gray-500 absolute top-[75%] left-[50%] -translate-x-1/2 z-3 flex items-center gap-5 opacity-100 transition-all ease-linear duration-500">
                 <img src="assets/logo-text.png" alt="" class="invert h-15">
                 <h3 class="font-medium text-5xl">Introduction... </h3>
             </div>
         </div>
-       <div id="page-1" class="h-[100vh] w-[100vw] flex flex-col items-center relative"> 
-            <h1 class="absolute top-[80%] z-3 text-white font-medium text-5xl"> Welcome to the era of spatial computing </h1>
-            <video src="assets/page-2.mp4" class="h-[100%] w-[100%] object-cover" autoplay loop muted></video>
+        <!-- PAGE 1 -->
+        <div id="page-1" class="h-[100vh] w-[100vw] flex flex-col items-center relative">
+            <h1 class="absolute top-[80%] z-3 text-white font-medium text-5xl"> Welcome to the era of spatial computing
+            </h1>
+            <video src="assets/page-2.mp4" class="h-[100%] w-[100%] object-cover" loop muted></video>
         </div>
-        <div id="page-2" class="h-[100vh] w-[100vw] relative flex flex-col items-center">
-            <h1 class="absolute text-white text-5xl font-medium top-[80%] text-center">Apple Vision Pro seamlessly blends  <br>  digital content with your physical space. </h1>
+        <!-- video breaker page -->
+        <div id="page-1-1" class="w-[100vw] relative flex px-20 py-10 justify-between ">
+            <div id="p5-left" class="text-4xl font-medium mt-20 flex flex-1 justify-center">
+                <h1> A world of apps. <br> A world of discovery.</h1>
+            </div>
+            <div id="p1-1-right" class="mt-10 w-1/2">
+                <p class="text-2xl font-medium text-gray-500">
+                    Apple Vision Pro expands the experience of your go‑to apps and opens up new possibilities in entertainment, productivity, gaming, and more. Browse the web in Safari, create a to‑do list in Notes, chat in Messages, and seamlessly move between them with a glance. And explore the App Store to discover an ever-expanding collection of awe-inspiring spatial apps designed for Apple Vision Pro.
+                </p>
+                <button class="mt-10 text-white bg-[#FF823D] text-lg px-4 py-2 rounded-full"> + Learn more about apps
+                </button>
+            </div>
+        </div>
+        <!-- PAGE 2 -->
+        <div id="page-2" class="h-[100vh] w-[100vw] relative flex flex-col items-center overflow-hidden">
+            <h1 class="absolute text-white text-5xl font-medium top-[80%] text-center">Apple Vision Pro seamlessly
+                blends <br> digital content with your physical space. </h1>
             <video src="assets/page-3.mp4" class="h[100%] w-[100%] object-cover" autoplay loop muted></video>
-        </div> 
-        <div id="page-3" class="h-[100vh] w-[100vw] relative mb-32">
-            <div id="p-3-wrapper" class="h-[100vh] w-[100vw] flex flex-col items-center absolute top-5/12">
-                <div id="upper-text" class="flex gap-x-10 text-yellow-500 font-medium text-3xl font-poppins">
-                <p> watch the film </p>
-                <p> watch the event </p>
-            </div>
-            <img src="assets/Apple vision image.png" alt="" class="w-7/12 object-cover">
-            <button class="px-10 py-5 text-xl border border-black rounded-full">+ Take a closer look at Vision Pro </button>
-            </div>
-        </div> 
-        <div id="page-4" class="h-[100vh] w-[100vw] relative">
-            <h1 class="absolute text-5xl text-center font-normal text-white top-8/12 left-1/2 -translate-x-1/2"> <span class="text-4xl">Apps</span> <br> Free your desktop. <br> And your apps will follow.</h1>
-            <video src="assets/page-4.mp4" muted autoplay loop class="w-[100%] h-[100%] object-cover"></video>
         </div>
+        <!-- PAGE 3  -->
+        <div id="page-3" class="min-h-[100vh] w-[100vw] relative py-10 gap-5 flex flex-col items-center">
+            <img src="assets/page-3.png" alt="">
+                <img src="assets/Apple vision image.png" alt="" class="w-9/12 object-cover">
+                <button class="px-10 py-5 text-xl border border-black rounded-full">+ Take a closer look at Vision Pro
+                </button>
+        </div>
+        <!--  PAGE 4  -->
+        <div id="page-4" class="h-[100vh] w-[100vw] relative">
+            <h1 class="absolute text-5xl text-center font-normal text-white top-8/12 left-1/2 -translate-x-1/2"> <span
+                    class="text-4xl">Apps</span> <br> Free your desktop. <br> And your apps will follow.</h1>
+            <video src="assets/page-4.mp4" muted loop class="w-[100%] h-[100%] object-cover"></video>
+        </div>
+        <!-- PAGE 5  -->
         <div id="page-5" class="w-[100vw] relative flex px-20 py-10 justify-between ">
             <div id="p5-left" class="text-4xl font-medium mt-20 flex flex-1 justify-center">
                 <h1> Your apps live in <br> your space. </h1>
             </div>
             <div id="p5-right" class="mt-10 w-1/2">
                 <p class="text-2xl font-medium text-gray-500">
-                    With Vision Pro, you have an infinite canvas that transforms how  you use the apps you love. Arrange apps anywhere and scale them to  the perfect size, making the workspace of your dreams a reality —  all while staying present in the world around you. Browse the web  in Safari, create a to-do list in Notes, chat in Messages, and  seamlessly move between them with a glance.
+                    With Vision Pro, you have an infinite canvas that transforms how you use the apps you love. Arrange
+                    apps anywhere and scale them to the perfect size, making the workspace of your dreams a reality —
+                    all while staying present in the world around you. Browse the web in Safari, create a to-do list in
+                    Notes, chat in Messages, and seamlessly move between them with a glance.
                 </p>
-                <button class="mt-10 text-white bg-[#FF823D] text-lg px-4 py-2 rounded-full"> + Learn more about apps </button>
+                <button class="mt-10 text-white bg-[#FF823D] text-lg px-4 py-2 rounded-full"> + Learn more about apps
+                </button>
             </div>
         </div>
-        <div id="page-6" class="w-[100vw] relative py-10 px-30 flex flex-col items-center gap-9">
+        <!-- PAGE 6  -->
+        <div id="page-6" class="w-[100vw] relative py-10 px-30 flex flex-col items-center gap-9 bg-[#F5F5F7]">
             <h3 class="font-medium text-4xl -translate-x-3"> Design </h3>
             <h1 class="font-medium text-6xl"> Designed by Apple. </h1>
-            <p class="text-2xl text-center"> Apple Vision Pro is the result of decades of experience designing high‑performance, mobile, and wearable devices — culminating in the most ambitious product Apple has ever created. Vision Pro integrates incredibly advanced technology into an elegant, compact form, resulting in an amazing experience every time you put it on. Enclosure. A singular piece of three-dimensionally formed laminated glass flows into an aluminum alloy frame that curves to wrap around your face. Light Seal. The Light Seal </p>
+            <p class="text-2xl text-center"> Apple Vision Pro is the result of decades of experience designing
+                high‑performance, mobile, and wearable devices — culminating in the most ambitious product Apple has
+                ever created. Vision Pro integrates incredibly advanced technology into an elegant, compact form,
+                resulting in an amazing experience every time you put it on. Enclosure. A singular piece of
+                three-dimensionally formed laminated glass flows into an aluminum alloy frame that curves to wrap around
+                your face. Light Seal. The Light Seal </p>
         </div>
+        <!-- PAGE 7 -->
         <div id="page-7" class="h-[100vh] w-[100vw] relative bg-[#F5F5F7]">
             <canvas class="relative z-10"></canvas>
         </div>
-        <div id="page-8"class="h-[100vh] w-[100vw] relative bg-[#F5F5F7]">
-            <h3 class="text-gray-500 text-xl absolute top-2/12 left-10"> <span class="text-black font-medium">Enclosure</span>  A singular piece of three- <br> dimensionally  formed laminated glass <br> flows into an  aluminum alloy frame that <br> curves to wrap around your face.</h3>
+        <!--  PAGE 8  -->
+        <div id="page-8" class="h-[100vh] w-[100vw] relative bg-[#F5F5F7]">
+            <h3 class="text-gray-500 text-xl absolute top-2/12 left-10"> <span
+                    class="text-black font-medium">Enclosure</span> A singular piece of three- <br> dimensionally formed
+                laminated glass <br> flows into an aluminum alloy frame that <br> curves to wrap around your face.</h3>
         </div>
-        <div id="page-9"class="h-[100vh] w-[100vw] relative bg-[#F5F5F7]">
-            <h3 class="text-gray-500 text-xl absolute right-10"> <span class="text-black font-medium">Light Seal </span>  The Light Seal gently <br> flexes to conform to your face, <br> delivering a precise fit while blocking <br> out stray light.</h3>
+        <!-- PAGE 9 -->
+        <div id="page-9" class="h-[100vh] w-[100vw] relative bg-[#F5F5F7]">
+            <h3 class="text-gray-500 text-xl absolute right-10"> <span class="text-black font-medium">Light Seal </span>
+                The Light Seal gently <br> flexes to conform to your face, <br> delivering a precise fit while blocking
+                <br> out stray light.</h3>
         </div>
-        <div id="page-10"class="h-[100vh] w-[100vw] relative bg-[#F5F5F7]">
-            <h3 class="text-gray-500 text-xl absolute top-2/12 left-10"> <span class="text-black font-medium">  Head Band. </span> The Head Band provides <br> cushioning, breathability, and stretch. <br> The Fit Dial lets you adjust Vision <br> Pro precisely to your head. </h3>
+        <!-- PAGE 10 -->
+        <div id="page-10" class="h-[100vh] w-[100vw] relative bg-[#F5F5F7]">
+            <h3 class="text-gray-500 text-xl absolute top-2/12 left-10"> <span class="text-black font-medium"> Head
+                    Band. </span> The Head Band provides <br> cushioning, breathability, and stretch. <br> The Fit Dial
+                lets you adjust Vision <br> Pro precisely to your head. </h3>
         </div>
-        <div id="page-11"class="h-[100vh] w-[100vw] relative bg-[#F5F5F7]">
-            <h3 class="text-gray-500 text-xl absolute right-10"> <span> Power. </span> The external battery supports <br> up to 2 hours of use, <br> and all‑day use when plugged in.1 </h3>
+        <!-- PAGE 11 -->
+        <div id="page-11" class="h-[100vh] w-[100vw] relative bg-[#F5F5F7]">
+            <h3 class="text-gray-500 text-xl absolute right-10"> <span class="text-black font-medium"> Power. </span>
+                The external battery supports <br> up to 2 hours of use, <br> and all‑day use when plugged in.1 </h3>
         </div>
-        <div id="page-12"class="h-[100vh] w-[100vw] relative bg-[#F5F5F7]">
-            <h3 class="text-gray-500 text-xl absolute top-2/12 left-10"> <span class="text-black font-medium">Sound. </span>  Speakers positioned close to <br> your ears deliver rich Spatial Audio <br> while keeping you aware of your <br> surroundings.</h3>
+        <!-- PAGE 12 -->
+        <div id="page-12" class="h-[100vh] w-[100vw] relative bg-[#F5F5F7]">
+            <h3 class="text-gray-500 text-xl absolute top-2/12 left-10"> <span class="text-black font-medium">Sound.
+                </span> Speakers positioned close to <br> your ears deliver rich Spatial Audio <br> while keeping you
+                aware of your <br> surroundings.</h3>
         </div>
-        <div id="page-13"class="h-[100vh] w-[100vw] relative bg-[#F5F5F7]">
-            <h3 class="text-gray-500 text-xl absolute right-10"> <span class="text-black font-medium">EyeSight.</span>   An outward display reveals <br> your eyes while wearing Vision Pro, <br> letting others know when you <br> are using apps or fully immersed.</h3>
+        <!-- PAGE 13 -->
+        <div id="page-13" class="h-[100vh] w-[100vw] relative bg-[#F5F5F7]">
+            <h3 class="text-gray-500 text-xl absolute right-10"> <span class="text-black font-medium">EyeSight.</span>
+                An outward display reveals <br> your eyes while wearing Vision Pro, <br> letting others know when you
+                <br> are using apps or fully immersed.</h3>
         </div>
+        <!-- PAGE 14  -->
         <div id="page-14" class="min-h-[100vh] w-[100vw] relative bg-[#F6F5F8]">
-            <img src="assets/page-14.webp" alt="" class="h-[100%] w-[100%] object-cover">
-            <video src="assets/page-14-video.mp4" class="h-[90vh] w-[95%] object-cover relative left-1/2 -translate-x-1/2 mt-[5%]" autoplay loop muted></video>
+            <img src="assets/page-14.webp" alt="" class="h-[100%] w-[100%] object-cover opacity-0 scale-125 relative"> -
+            <div id="p14-imgs" class="h-screen w-screen px-10 flex gap-10 mb-10">
+                <img src="assets/page-14_1.jpg" alt="" class="w-1/2">
+                <img src="assets/page-14_2.jpg" alt="" class="w-1/2">
+            </div>
+            <video src="assets/page-14-video.mp4"
+                class="h-[90vh] w-[95%] object-cover relative left-1/2 -translate-x-1/2" loop muted></video>
         </div>
-        <div id="page-15" class="min-h-[100vh] w-[100vw] relative flex flex-col items-center gap-10 py-5 bg-[#F6F5F8]">
-            <h3 class="text-2xl text-gray-500"> A singular piece of <span class="text-black">three-dimensionally formed laminated glass</span> acts as an <br>  optical surface for the cameras and sensors that view the world. It flows  <br> seamlessly into a custom aluminum alloy frame that gently curves to wrap <br>  around your face while serving as an attachment point for the <span class="text-black">Light Seal.</span> </h3>
-            <img src="assets/page-15.png" alt="" class="w-7/12">
-            <button class="text-2xl text-white bg-amber-500 rounded-full py-1 px-2 -mt-15"> + Learn more about design  </button>
+        <!--  PAGE 15  -->
+        <div id="page-15"
+            class="min-h-[100vh] w-[100vw] relative flex flex-col items-center gap-10 pt-5 bg-[#FFFFFF] overflow-hidden mt-20">
+            <h3 class="text-2xl text-gray-500 my-20"> A singular piece of <span
+                    class="text-black text-2xl">three-dimensionally formed laminated glass</span> acts as an <br>
+                optical surface for the cameras and sensors that view the world. It flows <br> seamlessly into a custom
+                aluminum alloy frame that gently curves to wrap <br> around your face while serving as an attachment
+                point for the <span class="text-black">Light Seal.</span> </h3>
+            <img src="assets/page-15.jpg" alt="" class="w-9/12 object-cover">
+            <button class="text-3xl text-white bg-[#FF6A19] rounded-full py-2 px-3 absolute bottom-[10%] font-medium"> +
+                Learn more about design </button>
         </div>
+        <!-- PAGE 16  -->
         <div id="page-16" class="min-h-[100vh] w-[100vw] bg-black flex flex-col items-center gap-10 text-white py-10">
             <h3 class="text-5xl font-medium"> Technology </h3>
             <h1 class="text-8xl text-center font-medium"> Innovation you can <br>
-                see, hear, and feel. 
+                see, hear, and feel.
             </h1>
-            <p class="text-gray-400 w-7/12 text-2xl text-center"> <span class="text-white"> Pushing boundaries from the inside out. </span> Spatial experiences on Vision Pro are only possible through groundbreaking Apple technology. Displays the size of a postage stamp that deliver more pixels than a 4K TV to each eye. Incredible advances in Spatial Audio. A revolutionary dual‑chip design featuring custom Apple silicon. A sophisticated array of cameras and sensors. All the elements work together to create an unprecedented experience you have to see to believe. </p>
-            <img src="assets/page-16.jpg" alt="" class="h-[70vh] w-[90vw] object-cover mb-30 mt-20">
-        </div> 
+            <img src="assets/page-16.jpg" alt="" class="h-[70vh] w-[90vw] object-cover mb-10 mt-10 opacity-0">
+            <p class="text-gray-400 w-9/12 text-2xl text-center"> <span class="text-white"> Pushing boundaries from the
+                    inside out. </span> Spatial experiences on Vision Pro are only possible through groundbreaking Apple
+                technology. Displays the size of a postage stamp that deliver more pixels than a 4K TV to each eye.
+                Incredible advances in Spatial Audio. A revolutionary dual‑chip design featuring custom Apple silicon. A
+                sophisticated array of cameras and sensors. All the elements work together to create an unprecedented
+                experience you have to see to believe. </p>
+        </div>
+        <!--  PAGE 17   -->
         <div id="page-17" class="bg-black min-h-[100vh] w-[100vw] relative">
             <canvas class="h-[100vh] w-[100vw] relative object-cover"></canvas>
-        </div> 
-        <div id="page-18" class="min-h-[100vh] w-[100vw] bg-black text-white text-center pt-10">
+        </div>
+        <!-- PAGE 18  -->
+        <div id="page-18" class="min-h-[100vh] w-[100vw] bg-black text-white text-center pt-10 relative">
             <h2 class="text-5xl font-medium"> More pixels than a 4K TV. For each eye. </h2>
             <p class="mt-10 text-2xl">
                 The custom micro‑OLED display system features 23 million pixels, <br>delivering stunning resolution and
@@ -111,10 +181,70 @@
             <video src="assets/page-18.mp4" autoplay loop muted class="h-[100vh] w-[100vw] object-cover mt-10">
             </video>
             <div id="p18-text" class="absolute bottom-6 right-6 w-3/12">
-                    <h2 class="text-3xl font-medium mb-5"> Our most advanced
-                        Spatial Audio system ever. </h2>
-                        <p class="text-center text-lg text-gray-300"> Dual-driver audio pods positioned next to each ear deliver personalized sound while letting you hear what’s around you. Ambient Spatial Audio makes sounds feel like they’re coming from your surroundings. And with audio raytracing, Vision Pro analyzes your room’s acoustic properties — including the physical </p>
-                </div>
+                <h2 class="text-3xl font-medium mb-5"> Our most advanced
+                    Spatial Audio system ever. </h2>
+                <p class="text-center text-lg text-gray-300"> Dual-driver audio pods positioned next to each ear deliver
+                    personalized sound while letting you hear what’s around you. Ambient Spatial Audio makes sounds feel
+                    like they’re coming from your surroundings. And with audio raytracing, Vision Pro analyzes your
+                    room’s acoustic properties — including the physical </p>
+            </div>
+        </div>
+        <!-- PAGE 19 -->
+        <div id="page-19"
+            class="h-[130vh] w-screen relative flex flex-col items-center bg-black text-white border-none">
+            <img src="assets/page-19_off.jpg" alt=""
+                class="absolute opacity-100 z-5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" id="p19-off">
+            <img src="assets/page-19-on.jpg" alt=""
+                class="absolute opacity-100 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" id="p19-on">
+            <div id="p19-text" class="absolute -bottom-20 flex flex-col items-center h-3/12 w-1/2 text-center gap-5 ">
+                <h2 class="text-4xl font-semibold"> Responsive, precision eye tracking. </h2>
+                <p class="text-xl"> A high‑performance eye‑tracking system of LEDs and infrared cameras projects
+                    invisible light
+                    patterns onto each eye. This advanced system provides ultraprecise input without your needing to
+                    hold any controllers, so you can accurately select elements just by looking at them. </p>
+            </div>
+        </div>
+        <!-- PAGE 20 -->
+        <div id="page-20" class="h-[145vh] w-screen relative bg-black border-none flex flex-col items-center">
+            <img src="assets/page-20-0.jpg" alt=""
+                class="w-7/12 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 opacity-100" id="p20-1">
+            <img src="assets/page-20-2.jpg" alt=""
+                class="w-7/12 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-9 opacity-100" id="p20-2">
+            <img src="assets/page-20-3.jpg" alt=""
+                class="w-7/12 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-7 opacity-100" id="p20-3">
+
+            <div id="p-20-text"
+                class="absolute bottom-0 flex flex-col items-center text-white h-3/12 w-1/2 text-center">
+                <h2 class="text-4xl font-semibold"> A sophisticated sensor array. </h2>
+                <p class="text-xl mt-5"> A pair of high-resolution cameras transmit over one billion pixels per second
+                    to the displays so you
+                    can
+                    see the world around you clearly. The system also helps deliver precise head and hand tracking and
+                    real‑time 3D mapping, all while understanding your hand gestures from a wide range of positions.
+                </p>
+            </div>
+        </div>
+        <!-- page-21 -->
+        <div id="page-21" class="h-[130vh] w-screen relative bg-black flex flex-col items-center">
+            <img src="assets/page-21-1.webp" alt=""
+                class="h-1/2 w-1/2 absolute top-4/12 left-1/2 -translate-x-1/2 -translate-y-4/12 opacity-15 scale-125">
+            <div id="p21-text" class="absolute bottom-10 flex flex-col items-center text-white text-center w-1/2 gap-5">
+                <h2 class="text-4xl font-medium"> Revolutionary dual‑chip performance. </h2>
+                <p class="text-xl"> A unique dual‑chip design enables the spatial experiences on Apple Vision Pro. The powerful M2 chip
+                    simultaneously runs visionOS, executes advanced computer vision algorithms, and delivers stunning
+                    graphics, all with incredible efficiency. And the brand-new R1 chip is specifically dedicated to
+                    process input from the cameras, sensors, and microphones, streaming images to the displays within 12
+                    milliseconds — for a virtually lag-free, real-time view of the world. </p>
+                <button class="bg-white text-black text-2xl py-2 px-8 font-medium rounded-full"> + Learn more about technology </button>
+            </div>
+        </div>
+        <div id="page-22" class="h-screen w-screen flex flex-col items-center justify-center gap-15">
+            <h4 class="font-semibold text-4xl"> Values </h4>
+            <h1 class="text-7xl text-center font-medium"> Designed to make <br> a difference. </h1>
+            <p class="text-xl text-center text-gray-500 font-medium"> 
+                <span class="text-black">Our values lead the way.</span> Apple Vision Pro was designed to help protect your privacy and <br>keep you in control of your data. Its built‑in accessibility features are designed to work <br>the way you do.
+            </p>
+            <button class="bg-[#FF6A19] text-white text-2xl py-4 px-8 rounded-full font-medium"> + Learn more about our values </button>
         </div>
     </div>
 
