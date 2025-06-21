@@ -134,16 +134,6 @@ scaleout_3.to("#page-4>video", {
 })
 
 
-//for pinning page-0
-gsap.to("#page-0", {
-  scrollTrigger: {
-    trigger: "#page-0",
-    scroller: "#main",
-    start: "top top",
-    end: "bottom top",
-    pin: true,
-  }
-})
 
 
 //page-0 text 
@@ -163,6 +153,16 @@ gsap.to("#text-btm", {
 })
 
 
+//for pinning page-0
+gsap.to("#page-0", {
+  scrollTrigger: {
+    trigger: "#page-0",
+    scroller: "#main",
+    start: "top top",
+    end: "bottom top",
+    pin: true,
+  }
+})
 // GSAP timeline works like function, in which we write scrollTrigger animation whihc we are going to use multiple time.
 
 let t1 = gsap.timeline({
