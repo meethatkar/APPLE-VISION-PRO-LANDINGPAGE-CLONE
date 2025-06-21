@@ -92,7 +92,7 @@ gsap.to("#page-14>video", {
 //scale out video (when exiting viewport)
 
 var scaleout_1 = gsap.timeline({
-  scrollTrigger:{
+  scrollTrigger: {
     scroller: "#main",
     trigger: "#page-1>video",
     start: "300% bottom",
@@ -101,12 +101,12 @@ var scaleout_1 = gsap.timeline({
     // markers: true
   }
 })
-scaleout_1.to("#page-1>video",{
+scaleout_1.to("#page-1>video", {
   scale: "0.93"
 })
 
 var scaleout_2 = gsap.timeline({
-  scrollTrigger:{
+  scrollTrigger: {
     scroller: "#main",
     trigger: "#page-2>video",
     start: "300% bottom",
@@ -115,12 +115,12 @@ var scaleout_2 = gsap.timeline({
     // markers: true
   }
 })
-scaleout_2.to("#page-2>video",{
+scaleout_2.to("#page-2>video", {
   scale: "0.93"
 })
 
 var scaleout_3 = gsap.timeline({
-  scrollTrigger:{
+  scrollTrigger: {
     scroller: "#main",
     trigger: "#page-4>video",
     start: "500% bottom",
@@ -129,7 +129,7 @@ var scaleout_3 = gsap.timeline({
     // markers: true
   }
 })
-scaleout_3.to("#page-4>video",{
+scaleout_3.to("#page-4>video", {
   scale: "0.93"
 })
 
@@ -676,3 +676,33 @@ function canvas1() {
 
 canvas();
 canvas1();
+
+// Warning TEXT
+function displayWarning(){
+  var textArr = [];
+var textDiv = document.querySelector("#disclaimer>h3");
+textDivContent = textDiv.textContent;
+textArr = textDivContent.split(' ');
+textDiv.innerHTML = "";
+// textDiv.style.opacity = "1";
+textDiv.style.opacity = "1";
+
+for (let i = 0; i <= textArr.length - 1; i++) {
+  setTimeout(() => {
+    console.log(textArr[i]);
+    textDiv.innerHTML += " " + textArr[i];
+  }, 300 * (i + 1))
+}
+setTimeout(() => {
+  document.querySelector("#disclaimer").style.zIndex = "0";
+  document.querySelector("#disclaimer").style.opacity = "0";
+  return;
+}, 15000);
+}
+displayWarning();
+// console.log(textDiv);
+
+window.addEventListener("load",()=>{
+  document.querySelector("#loader").style.opacity= "0";
+  document.querySelector("#loader").style.zIndex= "0";
+})

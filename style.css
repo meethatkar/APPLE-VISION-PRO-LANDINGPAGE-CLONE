@@ -8,3 +8,16 @@
     --font-proxima-reg: "Proxima Nova";
     --font-proxima-med: "Proxima Nova Medium";
 }
+
+@keyframes wave{
+    0%, 40%, 100%{
+        transform: scaleY(0.4);
+    }
+    20%{
+        transform: scaleY(1);
+    }
+}
+
+@utility animate-wave{
+    animation: wave 1s ease-in-out infinite;
+}
