@@ -89,6 +89,51 @@ gsap.to("#page-14>video", {
   }
 })
 
+//scale out video (when exiting viewport)
+
+var scaleout_1 = gsap.timeline({
+  scrollTrigger:{
+    scroller: "#main",
+    trigger: "#page-1>video",
+    start: "300% bottom",
+    end: "400% bottom",
+    scrub: 1,
+    // markers: true
+  }
+})
+scaleout_1.to("#page-1>video",{
+  scale: "0.93"
+})
+
+var scaleout_2 = gsap.timeline({
+  scrollTrigger:{
+    scroller: "#main",
+    trigger: "#page-2>video",
+    start: "300% bottom",
+    end: "400% bottom",
+    scrub: 1,
+    // markers: true
+  }
+})
+scaleout_2.to("#page-2>video",{
+  scale: "0.93"
+})
+
+var scaleout_3 = gsap.timeline({
+  scrollTrigger:{
+    scroller: "#main",
+    trigger: "#page-4>video",
+    start: "500% bottom",
+    end: "600% bottom",
+    scrub: 1,
+    // markers: true
+  }
+})
+scaleout_3.to("#page-4>video",{
+  scale: "0.93"
+})
+
+
 //for pinning page-0
 gsap.to("#page-0", {
   scrollTrigger: {
@@ -132,7 +177,7 @@ let t1 = gsap.timeline({
 })
 
 t1.to("#page-1>h1", {
-  top: "-30%"
+  top: "-10%"
 })
 
 let t2 = gsap.timeline({
@@ -147,7 +192,7 @@ let t2 = gsap.timeline({
 })
 
 t2.to("#page-2>h1", {
-  top: "-30%"
+  top: "-10%"
 })
 
 let t3 = gsap.timeline({
@@ -162,7 +207,7 @@ let t3 = gsap.timeline({
 })
 
 t3.to("#page-4>h1", {
-  top: "-30%"
+  top: "-20%"
 })
 
 // page 19 on off effect
