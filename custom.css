@@ -1,0 +1,68 @@
+#cus-btn{
+ position: relative;
+ z-index: inherit;
+ color: black;
+}
+#cus-btn::before{
+    content: "";
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    z-index: -1;
+    opacity: 1;
+    position: absolute;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+#cus-btn:hover{
+    color: white;
+    background-color: black;
+}
+#cus-btn:hover::before{
+    scale: 2;
+    opacity: 0;
+}
+
+.learn-btn{
+    position: relative;
+    z-index: 1;
+    background-color: #FF823D;
+    color: white;
+    border-radius: 50px;
+    transition: all 0.5s ease;
+    overflow: hidden;
+}
+.learn-btn-abs{
+    position: absolute;
+    z-index: 1;
+    background-color: #FF823D;
+    color: white;
+    border-radius: 50px;
+    transition: all 0.5s ease;
+    overflow: hidden;
+}
+.learn-btn::before,.learn-btn-abs::before{
+    content: "";
+    bottom: -100%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(241, 241, 241);
+    z-index: -1;
+    opacity: 1;
+    position: absolute;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+.learn-btn:hover,.learn-btn-abs:hover{
+    color: #3DBAFF;
+    border: 1px solid #3DBAFF;
+    /* z-index: 0; */
+    background-color: white;
+}
+.learn-btn:hover::before,
+.learn-btn-abs:hover::before{
+    bottom: 0%;
+    border-radius: 0%;
+}

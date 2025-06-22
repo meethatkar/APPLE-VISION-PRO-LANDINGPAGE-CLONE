@@ -6,33 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APPLE VISION PRO CLONE </title>
     <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="custom.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
 </head>
 
 <body class="h-screen w-screen">
-    <div id="mobile-warning" class="h-full w-full z-20 inset-0 lg:hidden lg:z-0 text-4xl flex items-center justify-center text-center font-medium bg-[#FFFFFF] flex-col">
+    <div id="mobile-warning" class="h-full w-full z-20 inset-0 md:hidden md:z-0 text-4xl flex items-center justify-center text-center font-medium bg-[#FFFFFF] flex-col">
         <img src="assets/Screenshot 2025-06-22 003909.png" alt="" class="h-3/12 mb-10" loading="lazy">
         <h1> Desktop friendly site. Access on laptop or computer for full experience. Mobile not supported.  </h1>
     </div>
-    <!-- <div id="disclaimer" class="inset-0 h-screen w-screen font-sans z-10 absolute text-center flex flex-col items-center justify-center bg-black text-white gap-10 opacity-100 transition-all ease-out duration-500">
+    <div id="disclaimer" class="inset-0 h-screen w-screen font-sans z-10 absolute text-center flex flex-col items-center justify-center bg-black text-white gap-10 opacity-100 transition-all ease-out duration-500">
         <h1 class="text-7xl font-medium"> Please Note </h1>
         <h3 class="text-3xl w-11/12 opacity-0 transition-all ease-linear duration-300 text-gray-500">This website is not a Original Website it's a clone, developed solely for educational and learning purposes. It is not affiliated with or endorsed by the original entity. The creator has no intention to harm, defame or violate any individual or entity through its content or presentation.</h3>
-    </div> -->
-    <!-- <div id="loader" class="flex justify-center items-center absolute inset-0 bg-gray-900 opacity-80 h-screen w-screen space-x-1 z-9">
+    </div>
+    <div id="loader" class="flex justify-center items-center absolute inset-0 bg-gray-900 opacity-80 h-screen w-screen space-x-1 z-9">
         <div class="w-2 h-10 bg-indigo-400 rounded-full animate-wave" style="animation-delay: -0.4s;"></div>
         <div class="w-2 h-10 bg-indigo-400 rounded-full animate-wave" style="animation-delay: -0.2s;"></div>
         <div class="w-2 h-10 bg-indigo-400 rounded-full animate-wave"></div>
         <div class="w-2 h-10 bg-indigo-400 rounded-full animate-wave" style="animation-delay: 0.2s;"></div>
         <div class="w-2 h-10 bg-indigo-400 rounded-full animate-wave" style="animation-delay: 0.4s;"></div>
-    </div> -->
-    <div id="main" class="relative overflow-hidden font-sans bg-white z-1 opacity-0 lg:opacity-100">
+    </div>
+    <div id="main" class="relative overflow-hidden font-sans bg-white z-1 opacity-0 md:opacity-100">
         <!-- PAGE 0 -->
         <div id="page-0" class="h-[100vh] w-[100vw] bg-black">
+            <div id="top-nav" class="h-10 w-screen absolute top-0 left-1/2 -translate-x-1/2 bg-gray-900 z-3 flex items-center justify-between px-36 text-white">
+                <i class="ri-apple-fill"></i>
+                <p>Store</p>
+                <p>Mac</p>
+                <p>iPad</p>
+                <p>iPhone</p>
+                <p>Watch</p>
+                <p>TV & Home</p>
+                <p>Vision</p>
+                <p>Entertainment</p>
+                <p>Accessories</p>
+                <p>support</p>
+                <i class="ri-search-line"></i>
+                <i class="ri-shopping-bag-line"></i>
+            </div>
             <nav
-                class="absolute top-0 left-[50%] -translate-x-1/2 h-[10vh] w-7/12 text-white flex items-center justify-between px-10 font-sans z-2">
+                class="absolute top-10 left-[50%] -translate-x-1/2 h-[10vh] w-7/12 flex items-center justify-between px-10 font-sans z-2">
                 <h1 class="font-medium text-2xl"> Vision Pro </h1>
-                <button class="px-4 py-1 bg-white text-black rounded-full font-medium"> Notify me </button>
+                <button class="px-4 py-1  rounded-full font-medium text-white" id="cus-btn"> Buy Now </button>
             </nav>
             <video src="assets/home_bg.mp4"
                 class="h-[100vh] w-[50vw] absolute left-[50%] -translate-x-1/2 z-1 object-cover" muted></video>
@@ -61,7 +77,7 @@
                     to discover an ever-expanding collection of awe-inspiring spatial apps designed for Apple Vision
                     Pro.
                 </p>
-                <button class="mt-10 text-white bg-[#FF823D] text-lg px-4 py-2 rounded-full"> + Learn more about apps
+                <button class="mt-10 text-white bg-[] text-lg px-4 py-2 learn-btn"> + Learn more about apps
                 </button>
             </div>
         </div>
@@ -75,7 +91,7 @@
         <div id="page-3" class="min-h-[100vh] w-[100vw] relative py-10 gap-5 flex flex-col items-center">
             <img src="assets/page-3.png" alt="" loading="lazy">
             <img src="assets/Apple vision image.png" alt="" class="w-9/12 object-cover" loading="lazy">
-            <button class="px-10 py-5 text-xl border border-black rounded-full">+ Take a closer look at Vision Pro
+            <button class="px-10 py-5 text-xl border border-black rounded-full ">+ Take a closer look at Vision Pro
             </button>
         </div>
         <!--  PAGE 4  -->
@@ -97,7 +113,7 @@
                     all while staying present in the world around you. Browse the web in Safari, create a to-do list in
                     Notes, chat in Messages, and seamlessly move between them with a glance.
                 </p>
-                <button class="mt-10 text-white bg-[#FF823D] text-lg px-4 py-2 rounded-full"> + Learn more about apps
+                <button class="mt-10 text-white bg-[#FF823D] text-lg px-4 py-2 rounded-full learn-btn"> + Learn more about apps
                 </button>
             </div>
         </div>
@@ -174,7 +190,7 @@
                 aluminum alloy frame that gently curves to wrap <br> around your face while serving as an attachment
                 point for the <span class="text-black">Light Seal.</span> </h3>
             <img src="assets/page-15.jpg" alt="" class="w-9/12 object-cover" loading="lazy">
-            <button class="text-3xl text-white bg-[#FF6A19] rounded-full py-2 px-3 absolute bottom-[10%] font-medium"> +
+            <button class="text-3xl text-white bg-[#FF6A19] rounded-full py-2 px-3 absolute bottom-[10%] font-medium learn-btn-abs"> +
                 Learn more about design </button>
         </div>
         <!-- PAGE 16  -->
