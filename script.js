@@ -693,7 +693,7 @@ setTimeout(() => {
   document.querySelector("#disclaimer").style.zIndex = "0";
   document.querySelector("#disclaimer").style.opacity = "0";
   return;
-}, 10000);
+}, 5000);
 }
 displayWarning();
 // console.log(textDiv);
@@ -701,4 +701,13 @@ displayWarning();
 window.addEventListener("load",()=>{
   document.querySelector("#loader").style.opacity= "0";
   document.querySelector("#loader").style.zIndex= "0";
+  setTimeout(() => {
+    ScrollTrigger.refresh();
+  },500);
+  if(window.innerWidth>950){
+    // document.querySelector("#main").style.opacity = "1";
+    // document.querySelector("#mobile-warning").style.zIndex = "-1";
+    // document.querySelector("#mobile-warning").style.visibility = "hidden";
+    // document.querySelector("#mobile-warning").style.display = "none";
+  }
 })
