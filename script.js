@@ -682,22 +682,18 @@ function displayWarning(){
   var textArr = [];
 var textDiv = document.querySelector("#disclaimer>h3");
 textDivContent = textDiv.textContent;
-textArr = textDivContent.split(' ');
-textDiv.innerHTML = "";
 // textDiv.style.opacity = "1";
-textDiv.style.opacity = "1";
 
-for (let i = 0; i <= textArr.length - 1; i++) {
   setTimeout(() => {
-    console.log(textArr[i]);
-    textDiv.innerHTML += " " + textArr[i];
-  }, 300 * (i + 1))
-}
+    textDiv.style.opacity = "1";
+    textDiv.style.width = "80%"
+    textDiv.style.scale = "1";
+  }, 1000)
 setTimeout(() => {
   document.querySelector("#disclaimer").style.zIndex = "0";
   document.querySelector("#disclaimer").style.opacity = "0";
   return;
-}, 15000);
+}, 10000);
 }
 displayWarning();
 // console.log(textDiv);
