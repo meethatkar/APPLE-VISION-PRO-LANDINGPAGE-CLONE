@@ -12,118 +12,136 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
-<body class="h-screen w-screen">
-    <div id="mobile-warning" class="h-full w-full z-20 text-4xl flex items-center justify-center text-center font-medium absolute bg-[#FFFFFF] flex-col lg:hidden">
+<body class="h-screen w-full overflow-hidden p-6 lg:p-5 bg-[#F5F5F7] box-border">
+    <div id="mobile-warning"
+        class="h-full w-full z-20 text-4xl flex items-center justify-center text-center font-medium absolute bg-[#FFFFFF] flex-col hidden">
         <img src="assets/Screenshot 2025-06-22 003909.png" alt="" class="h-3/12 mb-10">
-        <h1> Desktop friendly site. Access on laptop or computer for full experience. Mobile not supported.  </h1>
+        <h1> Desktop friendly site. Access on laptop or computer for full experience. Mobile not supported. </h1>
     </div>
-    <div id="disclaimer" class="inset-0 h-screen w-screen font-sans z-10 absolute text-center flex flex-col items-center justify-center bg-black text-white gap-10 opacity-100 transition-all ease-out duration-500">
+    <div id="disclaimer"
+        class="inset-0 h-screen w-full font-sans z-10 absolute text-center flex flex-col items-center justify-center bg-black text-white gap-10 opacity-100 transition-all ease-out duration-500">
         <h1 class="text-7xl font-medium"> Please Note </h1>
-        <h3 class="text-3xl  opacity-0 scale-50 transition-all ease-linear duration-500 text-gray-500">This website is not a Original Website it's a clone, developed solely for educational and learning purposes. It is not affiliated with or endorsed by the original entity. The creator has no intention to harm, defame or violate any individual or entity through its content or presentation.</h3>
+        <h3 class="text-3xl  opacity-0 scale-50 transition-all ease-linear duration-500 text-gray-500">This website is
+            not a Original Website it's a clone, developed solely for educational and learning purposes. It is not
+            affiliated with or endorsed by the original entity. The creator has no intention to harm, defame or violate
+            any individual or entity through its content or presentation.</h3>
     </div>
-    <div id="loader" class="flex justify-center items-center absolute inset-0 bg-gray-900 opacity-90 h-screen w-screen space-x-1 z-9">
+    <div id="loader"
+        class="flex justify-center items-center absolute inset-0 bg-gray-900 opacity-90 h-screen w-full space-x-1 z-9">
         <div class="w-2 h-10 bg-indigo-400 rounded-full animate-wave" style="animation-delay: -0.4s;"></div>
         <div class="w-2 h-10 bg-indigo-400 rounded-full animate-wave" style="animation-delay: -0.2s;"></div>
         <div class="w-2 h-10 bg-indigo-400 rounded-full animate-wave"></div>
         <div class="w-2 h-10 bg-indigo-400 rounded-full animate-wave" style="animation-delay: 0.2s;"></div>
         <div class="w-2 h-10 bg-indigo-400 rounded-full animate-wave" style="animation-delay: 0.4s;"></div>
     </div>
-    <div id="main" class="relative overflow-hidden font-sans bg-white z-1 opacity-100">
+    <div id="main"
+        class="relative overflow-hidden font-sans bg-white z-1 opacity-100 rounded-2xl lg:rounded-3xl shadow-2xl">
         <!-- PAGE 0 -->
-        <div id="page-0" class="h-[100vh] w-[100vw] bg-black">
-            <div id="top-nav" class="h-10 w-screen absolute top-0 left-1/2 -translate-x-1/2 bg-gray-900 z-3 flex items-center justify-between px-36 text-white">
+        <div id="page-0" class="h-[100vh] w-full bg-black">
+            <div id="top-nav"
+                class="p-4 h-10 w-full absolute top-0 left-1/2 -translate-x-1/2 bg-gray-900 z-3 flex items-center justify-between px-5 lg:px-36 text-white text-xs lg:text-base overflow-hidden">
                 <i class="ri-apple-fill"></i>
-                <p>Store</p>
-                <p>Mac</p>
-                <p>iPad</p>
-                <p>iPhone</p>
-                <p>Watch</p>
-                <p>TV & Home</p>
-                <p>Vision</p>
-                <p>Entertainment</p>
-                <p>Accessories</p>
-                <p>support</p>
-                <i class="ri-search-line"></i>
+                <p class="hidden lg:block">Store</p>
+                <p class="hidden lg:block">Mac</p>
+                <p class="hidden lg:block">iPad</p>
+                <p class="hidden lg:block">iPhone</p>
+                <p class="hidden lg:block">Watch</p>
+                <p class="hidden lg:block">TV & Home</p>
+                <p class="hidden lg:block">Vision</p>
+                <p class="hidden lg:block">Entertainment</p>
+                <p class="hidden lg:block">Accessories</p>
+                <p class="hidden lg:block">support</p>
+                <i class="ri-search-line ml-auto lg:ml-0 mr-4 lg:mr-0"></i>
                 <i class="ri-shopping-bag-line"></i>
             </div>
             <nav
-                class="absolute top-10 left-[50%] -translate-x-1/2 h-[10vh] w-7/12 flex items-center justify-between px-10 font-sans z-2">
+                class="absolute top-10 left-[50%] -translate-x-1/2 h-[10vh] w-full lg:w-7/12 flex items-center justify-between px-5 lg:px-10 font-sans z-2">
                 <h1 class="font-medium text-2xl text-white"> Vision Pro </h1>
                 <button class="px-4 py-1  rounded-full font-medium text-white" id="cus-btn"> Buy Now </button>
             </nav>
             <video src="assets/home_bg.mp4"
-                class="h-[100vh] w-[50vw] absolute left-[50%] -translate-x-1/2 z-1 object-cover" muted></video>
+                class="h-[100vh] w-full lg:w-[50vw] absolute left-[50%] -translate-x-1/2 z-1 object-cover"
+                muted></video>
             <div id="text-btm"
                 class="text-gray-500 absolute top-[75%] left-[50%] -translate-x-1/2 z-3 flex items-center gap-5 opacity-100 transition-all ease-linear duration-500">
                 <img src="assets/logo-text.png" alt="" class="invert h-15">
-                <h3 class="font-medium text-5xl">Introducing... </h3>
+                <h3 class="font-medium text-3xl lg:text-5xl">Introducing... </h3>
             </div>
         </div>
         <!-- PAGE 1 -->
-        <div id="page-1" class="h-[100vh] w-[100vw] flex flex-col items-center relative">
-            <h1 class="absolute top-[80%] z-3 text-white font-medium text-5xl"> Welcome to the era of spatial computing
+        <div id="page-1" class="h-[100vh] w-full flex flex-col items-center relative">
+            <h1 class="absolute top-[80%] z-3 text-white font-medium text-3xl lg:text-5xl text-center px-5"> Welcome to
+                the era of spatial computing
             </h1>
             <video src="assets/page-2.mp4" class="h-[100%] w-[100%] object-cover" loop muted></video>
         </div>
         <!-- video breaker page -->
-        <div id="page-1-1" class="w-[100vw] relative flex px-20 py-10 justify-between ">
-            <div id="p5-left" class="text-4xl font-medium mt-20 flex flex-1 justify-center">
+        <div id="page-1-1" class="w-full relative flex flex-col lg:flex-row px-5 lg:px-20 py-10 justify-between ">
+            <div id="p5-left"
+                class="text-3xl lg:text-4xl font-medium lg:mt-20 flex flex-1 lg:justify-center text-center lg:text-left mb-10 lg:mb-0">
                 <h1> A world of apps. <br> A world of discovery.</h1>
             </div>
-            <div id="p1-1-right" class="mt-10 w-1/2">
-                <p class="text-2xl font-medium text-gray-500">
+            <div id="p1-1-right" class="lg:mt-10 w-full lg:w-1/2 text-center lg:text-left">
+                <p class="text-lg lg:text-2xl font-medium text-gray-500">
                     Apple Vision Pro expands the experience of your go‑to apps and opens up new possibilities in
                     entertainment, productivity, gaming, and more. Browse the web in Safari, create a to‑do list in
                     Notes, chat in Messages, and seamlessly move between them with a glance. And explore the App Store
                     to discover an ever-expanding collection of awe-inspiring spatial apps designed for Apple Vision
                     Pro.
                 </p>
-                <button class="mt-10 text-white bg-[] text-lg px-4 py-2 learn-btn"> + Learn more about apps
+                <button class="mt-10 text-white bg-[] text-base lg:text-lg px-4 py-2 learn-btn"> + Learn more about apps
                 </button>
             </div>
         </div>
         <!-- PAGE 2 -->
-        <div id="page-2" class="h-[100vh] w-[100vw] relative flex flex-col items-center overflow-hidden">
-            <h1 class="absolute text-white text-5xl font-medium top-[80%] text-center z-3">Apple Vision Pro seamlessly
+        <div id="page-2" class="h-[100vh] w-full relative flex flex-col items-center overflow-hidden">
+            <h1 class="absolute text-white text-2xl lg:text-5xl font-medium top-[80%] text-center z-3 px-5">Apple Vision
+                Pro seamlessly
                 blends <br> digital content with your physical space. </h1>
             <video src="assets/page-3.mp4" class="h[100%] w-[100%] object-cover" autoplay loop muted></video>
         </div>
         <!-- PAGE 3  -->
-        <div id="page-3" class="min-h-[100vh] w-[100vw] relative py-10 gap-5 flex flex-col items-center">
+        <div id="page-3" class="min-h-[100vh] w-full relative py-10 gap-5 flex flex-col items-center">
             <img src="assets/page-3.png" alt="">
-            <img src="assets/Apple vision image.png" alt="" class="w-9/12 object-cover">
-            <button class="px-10 py-5 text-xl border border-black rounded-full ">+ Take a closer look at Vision Pro
+            <img src="assets/Apple vision image.png" alt="" class="w-11/12 lg:w-9/12 object-cover">
+            <button
+                class="px-5 py-3 lg:px-10 lg:py-5 text-sm lg:text-xl border border-black rounded-full max-w-[90vw]">+
+                Take a closer look at Vision Pro
             </button>
         </div>
         <!--  PAGE 4  -->
-        <div id="page-4" class="h-[100vh] w-[100vw] relative">
-            <h1 class="absolute text-5xl text-center font-normal text-white top-8/12 left-1/2 -translate-x-1/2 z-3">
-                <span class="text-4xl">Apps</span> <br> Free your desktop. <br> And your apps will follow.
+        <div id="page-4" class="h-[100vh] w-full relative">
+            <h1
+                class="absolute text-3xl lg:text-5xl text-center font-normal text-white top-8/12 left-1/2 -translate-x-1/2 z-3 w-full px-5">
+                <span class="text-2xl lg:text-4xl">Apps</span> <br> Free your desktop. <br> And your apps will follow.
             </h1>
             <video src="assets/page-4.mp4" muted loop class="w-[100%] h-[100%] object-cover"></video>
         </div>
         <!-- PAGE 5  -->
-        <div id="page-5" class="w-[100vw] relative flex px-20 py-10 justify-between ">
-            <div id="p5-left" class="text-4xl font-medium mt-20 flex flex-1 justify-center">
+        <div id="page-5" class="w-full relative flex flex-col lg:flex-row px-5 lg:px-20 py-10 justify-between ">
+            <div id="p5-left"
+                class="text-3xl lg:text-4xl font-medium lg:mt-20 flex flex-1 justify-center text-center lg:text-left mb-10 lg:mb-0">
                 <h1> Your apps live in <br> your space. </h1>
             </div>
-            <div id="p5-right" class="mt-10 w-1/2">
-                <p class="text-2xl font-medium text-gray-500">
+            <div id="p5-right" class="lg:mt-10 w-full lg:w-1/2 text-center lg:text-left">
+                <p class="text-lg lg:text-2xl font-medium text-gray-500">
                     With Vision Pro, you have an infinite canvas that transforms how you use the apps you love. Arrange
                     apps anywhere and scale them to the perfect size, making the workspace of your dreams a reality —
                     all while staying present in the world around you. Browse the web in Safari, create a to-do list in
                     Notes, chat in Messages, and seamlessly move between them with a glance.
                 </p>
-                <button class="mt-10 text-white bg-[#FF823D] text-lg px-4 py-2 rounded-full learn-btn"> + Learn more about apps
+                <button class="mt-10 text-white bg-[#FF823D] text-base lg:text-lg px-4 py-2 rounded-full learn-btn"> +
+                    Learn more about apps
                 </button>
             </div>
         </div>
         <!-- PAGE 6  -->
         <div id="page-6"
-            class="w-[100vw] relative py-10 px-30 flex flex-col items-center gap-9 bg-gradient-to-b from-white via-[#F5F5F7] to-[#F5F5F7]">
-            <h3 class="font-medium text-4xl -translate-x-3"> Design </h3>
-            <h1 class="font-medium text-6xl"> Designed by Apple. </h1>
-            <p class="text-2xl text-center"> Apple Vision Pro is the result of decades of experience designing
+            class="w-full relative py-10 px-5 lg:px-30 flex flex-col items-center gap-9 bg-gradient-to-b from-white via-[#F5F5F7] to-[#F5F5F7]">
+            <h3 class="font-medium text-2xl lg:text-4xl -translate-x-3"> Design </h3>
+            <h1 class="font-medium text-4xl lg:text-6xl text-center"> Designed by Apple. </h1>
+            <p class="text-lg lg:text-2xl text-center"> Apple Vision Pro is the result of decades of experience
+                designing
                 high‑performance, mobile, and wearable devices — culminating in the most ambitious product Apple has
                 ever created. Vision Pro integrates incredibly advanced technology into an elegant, compact form,
                 resulting in an amazing experience every time you put it on. Enclosure. A singular piece of
@@ -131,77 +149,108 @@
                 your face. Light Seal. The Light Seal </p>
         </div>
         <!-- PAGE 7 -->
-        <div id="page-7" class="h-[100vh] w-[100vw] relative bg-[#F5F5F7]">
+        <div id="page-7" class="h-[100vh] w-full relative bg-[#F5F5F7]">
             <canvas class="relative z-10 border-b-2 border-b-black"></canvas>
         </div>
         <!--  PAGE 8  -->
-        <div id="page-8" class="h-[100vh] w-[100vw] relative bg-[#F5F5F7]">
-            <h3 class="text-gray-500 text-xl absolute top-2/12 left-10"> <span
-                    class="text-black font-medium">Enclosure</span> A singular piece of three- <br> dimensionally formed
-                laminated glass <br> flows into an aluminum alloy frame that <br> curves to wrap around your face.</h3>
+        <div id="page-8" class="h-[100vh] w-full relative bg-[#F5F5F7]">
+            <h3
+                class="text-gray-500 text-base lg:text-xl absolute top-[5%] lg:top-2/12 left-5 lg:left-10 max-w-[90vw] lg:max-w-none">
+                <span class="text-black font-medium">Enclosure</span> A singular piece of three- <br
+                    class="hidden lg:block"> dimensionally formed
+                laminated glass <br class="hidden lg:block"> flows into an aluminum alloy frame that <br
+                    class="hidden lg:block"> curves to wrap around your face.
+            </h3>
         </div>
         <!-- PAGE 9 -->
-        <div id="page-9" class="h-[100vh] w-[100vw] relative bg-[#F5F5F7]">
-            <h3 class="text-gray-500 text-xl absolute right-10"> <span class="text-black font-medium">Light Seal </span>
-                The Light Seal gently <br> flexes to conform to your face, <br> delivering a precise fit while blocking
-                <br> out stray light.
+        <div id="page-9" class="h-[100vh] w-full relative bg-[#F5F5F7]">
+            <h3
+                class="text-gray-500 text-base lg:text-xl absolute bottom-[10%] lg:bottom-auto lg:top-[20%] right-5 lg:right-10 max-w-[90vw] lg:max-w-none text-right">
+                <span class="text-black font-medium">Light Seal </span>
+                The Light Seal gently <br class="hidden lg:block"> flexes to conform to your face, <br
+                    class="hidden lg:block"> delivering a precise fit while blocking
+                <br class="hidden lg:block"> out stray light.
             </h3>
         </div>
         <!-- PAGE 10 -->
-        <div id="page-10" class="h-[100vh] w-[100vw] relative bg-[#F5F5F7]">
-            <h3 class="text-gray-500 text-xl absolute top-2/12 left-10"> <span class="text-black font-medium"> Head
-                    Band. </span> The Head Band provides <br> cushioning, breathability, and stretch. <br> The Fit Dial
-                lets you adjust Vision <br> Pro precisely to your head. </h3>
+        <div id="page-10" class="h-[100vh] w-full relative bg-[#F5F5F7]">
+            <h3
+                class="text-gray-500 text-base lg:text-xl absolute top-[5%] lg:top-2/12 left-5 lg:left-10 max-w-[90vw] lg:max-w-none">
+                <span class="text-black font-medium"> Head
+                    Band. </span> The Head Band provides <br class="hidden lg:block"> cushioning, breathability, and
+                stretch. <br class="hidden lg:block"> The Fit Dial
+                lets you adjust Vision <br class="hidden lg:block"> Pro precisely to your head.
+            </h3>
         </div>
         <!-- PAGE 11 -->
-        <div id="page-11" class="h-[100vh] w-[100vw] relative bg-[#F5F5F7]">
-            <h3 class="text-gray-500 text-xl absolute right-10"> <span class="text-black font-medium"> Power. </span>
-                The external battery supports <br> up to 2 hours of use, <br> and all‑day use when plugged in.1 </h3>
+        <div id="page-11" class="h-[100vh] w-full relative bg-[#F5F5F7]">
+            <h3
+                class="text-gray-500 text-base lg:text-xl absolute bottom-[10%] lg:bottom-auto lg:top-[20%] right-5 lg:right-10 max-w-[90vw] lg:max-w-none text-right">
+                <span class="text-black font-medium"> Power. </span>
+                The external battery supports <br class="hidden lg:block"> up to 2 hours of use, <br
+                    class="hidden lg:block"> and all‑day use when plugged in.1
+            </h3>
         </div>
         <!-- PAGE 12 -->
-        <div id="page-12" class="h-[100vh] w-[100vw] relative bg-[#F5F5F7]">
-            <h3 class="text-gray-500 text-xl absolute top-2/12 left-10"> <span class="text-black font-medium">Sound.
-                </span> Speakers positioned close to <br> your ears deliver rich Spatial Audio <br> while keeping you
-                aware of your <br> surroundings.</h3>
+        <div id="page-12" class="h-[100vh] w-full relative bg-[#F5F5F7]">
+            <h3
+                class="text-gray-500 text-base lg:text-xl absolute top-[5%] lg:top-2/12 left-5 lg:left-10 max-w-[90vw] lg:max-w-none">
+                <span class="text-black font-medium">Sound.
+                </span> Speakers positioned close to <br class="hidden lg:block"> your ears deliver rich Spatial Audio
+                <br class="hidden lg:block"> while keeping you
+                aware of your <br class="hidden lg:block"> surroundings.
+            </h3>
         </div>
         <!-- PAGE 13 -->
-        <div id="page-13" class="h-[100vh] w-[100vw] relative bg-[#F5F5F7]">
-            <h3 class="text-gray-500 text-xl absolute right-10"> <span class="text-black font-medium">EyeSight.</span>
-                An outward display reveals <br> your eyes while wearing Vision Pro, <br> letting others know when you
-                <br> are using apps or fully immersed.
+        <div id="page-13" class="h-[100vh] w-full relative bg-[#F5F5F7]">
+            <h3
+                class="text-gray-500 text-base lg:text-xl absolute bottom-[10%] lg:bottom-auto lg:top-[20%] right-5 lg:right-10 max-w-[90vw] lg:max-w-none text-right">
+                <span class="text-black font-medium">EyeSight.</span>
+                An outward display reveals <br class="hidden lg:block"> your eyes while wearing Vision Pro, <br
+                    class="hidden lg:block"> letting others know when you
+                <br class="hidden lg:block"> are using apps or fully immersed.
             </h3>
         </div>
         <!-- PAGE 14  -->
-        <div id="page-14" class="min-h-[100vh] w-[100vw] relative bg-[#F6F5F8]">
+        <div id="page-14" class="min-h-[100vh] w-full relative bg-[#F6F5F8]">
             <img src="assets/page-14.webp" alt=""
                 class="h-[100%] w-[100%] object-cover opacity-0 scale-125 -mb-10 relative"> -
-            <div id="p14-imgs" class="h-screen w-screen px-10 flex gap-10 mb-10">
-                <img src="assets/page-14_1.jpg" alt="" class="w-1/2">
-                <img src="assets/page-14_2.jpg" alt="" class="w-1/2">
+            <div id="p14-imgs"
+                class="min-h-screen w-full px-5 lg:px-10 flex flex-col lg:flex-row gap-5 lg:gap-10 mb-10 mt-10">
+                <img src="assets/page-14_1.jpg" alt="" class="w-full lg:w-1/2">
+                <img src="assets/page-14_2.jpg" alt="" class="w-full lg:w-1/2">
             </div>
             <video src="assets/page-14-video.mp4"
                 class="h-[90vh] w-[95%] object-cover relative left-1/2 -translate-x-1/2" loop muted></video>
         </div>
         <!--  PAGE 15  -->
         <div id="page-15"
-            class="min-h-[100vh] w-[100vw] relative flex flex-col items-center gap-10 pt-5 bg-[#FFFFFF] overflow-hidden mt-20">
-            <h3 class="text-2xl text-gray-500 my-20"> A singular piece of <span
-                    class="text-black text-2xl">three-dimensionally formed laminated glass</span> acts as an <br>
-                optical surface for the cameras and sensors that view the world. It flows <br> seamlessly into a custom
-                aluminum alloy frame that gently curves to wrap <br> around your face while serving as an attachment
-                point for the <span class="text-black">Light Seal.</span> </h3>
-            <img src="assets/page-15.jpg" alt="" class="w-9/12 object-cover">
-            <button class="text-3xl text-white bg-[#FF6A19] rounded-full py-2 px-3 absolute bottom-[10%] font-medium learn-btn-abs"> +
+            class="min-h-[100vh] w-full relative flex flex-col items-center gap-10 pt-5 bg-[#FFFFFF] overflow-hidden mt-20">
+            <h3 class="text-xl lg:text-2xl text-gray-500 my-20 text-center px-5 max-w-[95vw]"> A singular piece of <span
+                    class="text-black text-xl lg:text-2xl">three-dimensionally formed laminated glass</span> acts as an
+                <br class="hidden lg:block">
+                optical surface for the cameras and sensors that view the world. It flows <br class="hidden lg:block">
+                seamlessly into a custom
+                aluminum alloy frame that gently curves to wrap <br class="hidden lg:block"> around your face while
+                serving as an attachment
+                point for the <span class="text-black">Light Seal.</span>
+            </h3>
+            <img src="assets/page-15.jpg" alt="" class="w-11/12 lg:w-9/12 object-cover">
+            <button
+                class="text-lg lg:text-3xl text-white bg-[#FF6A19] rounded-full py-2 px-3 absolute bottom-[10%] font-medium learn-btn-abs max-w-[90vw]">
+                +
                 Learn more about design </button>
         </div>
         <!-- PAGE 16  -->
-        <div id="page-16" class="min-h-[100vh] w-[100vw] bg-black flex flex-col items-center gap-10 text-white py-10">
-            <h3 class="text-5xl font-medium"> Technology </h3>
-            <h1 class="text-8xl text-center font-medium"> Innovation you can <br>
+        <div id="page-16" class="min-h-[100vh] w-full bg-black flex flex-col items-center gap-10 text-white py-10 px-5">
+            <h3 class="text-3xl lg:text-5xl font-medium"> Technology </h3>
+            <h1 class="text-4xl lg:text-8xl text-center font-medium"> Innovation you can <br>
                 see, hear, and feel.
             </h1>
-            <img src="assets/page-16.jpg" alt="" class="h-[70vh] w-[90vw] object-cover mb-10 mt-10 opacity-0">
-            <p class="text-gray-400 w-9/12 text-2xl text-center"> <span class="text-white"> Pushing boundaries from the
+            <img src="assets/page-16.jpg" alt=""
+                class="h-[50vh] lg:h-[70vh] w-[95vw] lg:w-[90vw] object-cover mb-10 mt-10 opacity-0">
+            <p class="text-gray-400 w-11/12 lg:w-9/12 text-lg lg:text-2xl text-center"> <span class="text-white">
+                    Pushing boundaries from the
                     inside out. </span> Spatial experiences on Vision Pro are only possible through groundbreaking Apple
                 technology. Displays the size of a postage stamp that deliver more pixels than a 4K TV to each eye.
                 Incredible advances in Spatial Audio. A revolutionary dual‑chip design featuring custom Apple silicon. A
@@ -209,56 +258,65 @@
                 experience you have to see to believe. </p>
         </div>
         <!--  PAGE 17   -->
-        <div id="page-17" class="bg-black min-h-[100vh] w-[100vw] relative">
-            <canvas class="h-[100vh] w-[100vw] relative object-cover"></canvas>
+        <div id="page-17" class="bg-black min-h-[100vh] w-full relative">
+            <canvas class="h-[100vh] w-full relative object-cover"></canvas>
         </div>
         <!-- PAGE 18  -->
-        <div id="page-18" class="min-h-[100vh] w-[100vw] bg-black text-white text-center pt-10 relative">
-            <h2 class="text-5xl font-medium"> More pixels than a 4K TV. For each eye. </h2>
-            <p class="mt-10 text-2xl">
-                The custom micro‑OLED display system features 23 million pixels, <br>delivering stunning resolution and
-                colors. And a specially designed <br>three‑element lens creates the feeling of a display that’s
-                everywhere <br> you look.
+        <div id="page-18" class="min-h-[100vh] w-full bg-black text-white text-center pt-10 relative">
+            <h2 class="text-3xl lg:text-5xl font-medium px-5"> More pixels than a 4K TV. For each eye. </h2>
+            <p class="mt-10 text-lg lg:text-2xl px-5">
+                The custom micro‑OLED display system features 23 million pixels, <br class="hidden lg:block">delivering
+                stunning resolution and
+                colors. And a specially designed <br class="hidden lg:block">three‑element lens creates the feeling of a
+                display that’s
+                everywhere <br class="hidden lg:block"> you look.
             </p>
-            <video src="assets/page-18.mp4" autoplay loop muted class="h-[100vh] w-[100vw] object-cover mt-10">
+            <video src="assets/page-18.mp4" autoplay loop muted class="h-[100vh] w-full object-cover mt-10">
             </video>
-            <div id="p18-text" class="absolute bottom-6 right-6 w-3/12">
-                <h2 class="text-3xl font-medium mb-5"> Our most advanced
+            <div id="p18-text"
+                class="absolute bottom-6 right-1/2 translate-x-1/2 lg:translate-x-0 lg:right-6 w-11/12 lg:w-3/12 bg-black/60 lg:bg-transparent p-5 lg:p-0 rounded-2xl">
+                <h2 class="text-xl lg:text-3xl font-medium mb-5"> Our most advanced
                     Spatial Audio system ever. </h2>
-                <p class="text-center text-lg text-gray-300"> Dual-driver audio pods positioned next to each ear deliver
+                <p class="text-center text-sm lg:text-lg text-gray-300"> Dual-driver audio pods positioned next to each
+                    ear deliver
                     personalized sound while letting you hear what’s around you. Ambient Spatial Audio makes sounds feel
                     like they’re coming from your surroundings. And with audio raytracing, Vision Pro analyzes your
                     room’s acoustic properties — including the physical </p>
             </div>
         </div>
         <!-- PAGE 19 -->
-        <div id="page-19"
-            class="h-[130vh] w-screen relative flex flex-col items-center bg-black text-white border-none">
+        <div id="page-19" class="h-[130vh] w-full relative flex flex-col items-center bg-black text-white border-none">
             <img src="assets/page-19_off.jpg" alt=""
                 class="absolute opacity-100 z-5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" id="p19-off">
             <img src="assets/page-19-on.jpg" alt=""
                 class="absolute opacity-100 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" id="p19-on">
-            <div id="p19-text" class="absolute -bottom-20 flex flex-col items-center h-3/12 w-1/2 text-center gap-5 ">
-                <h2 class="text-4xl font-semibold"> Responsive, precision eye tracking. </h2>
-                <p class="text-xl"> A high‑performance eye‑tracking system of LEDs and infrared cameras projects
+            <div id="p19-text"
+                class="absolute lg:-bottom-20 bottom-10 flex flex-col items-center h-3/12 w-11/12 lg:w-1/2 text-center gap-5 ">
+                <h2 class="text-2xl lg:text-4xl font-semibold"> Responsive, precision eye tracking. </h2>
+                <p class="text-base lg:text-xl"> A high‑performance eye‑tracking system of LEDs and infrared cameras
+                    projects
                     invisible light
                     patterns onto each eye. This advanced system provides ultraprecise input without your needing to
                     hold any controllers, so you can accurately select elements just by looking at them. </p>
             </div>
         </div>
         <!-- PAGE 20 -->
-        <div id="page-20" class="h-[145vh] w-screen relative bg-black border-none flex flex-col items-center">
+        <div id="page-20" class="h-[145vh] w-full relative bg-black border-none flex flex-col items-center">
             <img src="assets/page-20-0.jpg" alt=""
-                class="w-7/12 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 opacity-100" id="p20-1">
+                class="w-11/12 lg:w-7/12 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 opacity-100"
+                id="p20-1">
             <img src="assets/page-20-2.jpg" alt=""
-                class="w-7/12 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-9 opacity-100" id="p20-2">
+                class="w-11/12 lg:w-7/12 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-9 opacity-100"
+                id="p20-2">
             <img src="assets/page-20-3.jpg" alt=""
-                class="w-7/12 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-7 opacity-100" id="p20-3">
+                class="w-11/12 lg:w-7/12 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-7 opacity-100"
+                id="p20-3">
 
             <div id="p-20-text"
-                class="absolute bottom-0 flex flex-col items-center text-white h-3/12 w-1/2 text-center">
-                <h2 class="text-4xl font-semibold"> A sophisticated sensor array. </h2>
-                <p class="text-xl mt-5"> A pair of high-resolution cameras transmit over one billion pixels per second
+                class="absolute bottom-10 lg:bottom-0 flex flex-col items-center text-white h-3/12 w-11/12 lg:w-1/2 text-center">
+                <h2 class="text-2xl lg:text-4xl font-semibold"> A sophisticated sensor array. </h2>
+                <p class="text-base lg:text-xl mt-5"> A pair of high-resolution cameras transmit over one billion pixels
+                    per second
                     to the displays so you
                     can
                     see the world around you clearly. The system also helps deliver precise head and hand tracking and
@@ -267,68 +325,88 @@
             </div>
         </div>
         <!-- page-21 -->
-        <div id="page-21" class="h-[130vh] w-screen relative bg-black flex flex-col items-center">
+        <div id="page-21" class="h-[130vh] w-full relative bg-black flex flex-col items-center">
             <img src="assets/page-21-1.webp" alt=""
-                class="h-1/2 w-1/2 absolute top-4/12 left-1/2 -translate-x-1/2 -translate-y-4/12 opacity-15 scale-125" >
-            <div id="p21-text" class="absolute bottom-10 flex flex-col items-center text-white text-center w-1/2 gap-5">
-                <h2 class="text-4xl font-medium"> Revolutionary dual‑chip performance. </h2>
-                <p class="text-xl"> A unique dual‑chip design enables the spatial experiences on Apple Vision Pro. The
+                class="h-1/2 w-1/2 absolute top-4/12 left-1/2 -translate-x-1/2 -translate-y-4/12 opacity-15 scale-125">
+            <div id="p21-text"
+                class="absolute bottom-10 flex flex-col items-center text-white text-center w-11/12 lg:w-1/2 gap-5">
+                <h2 class="text-2xl lg:text-4xl font-medium"> Revolutionary dual‑chip performance. </h2>
+                <p class="text-base lg:text-xl"> A unique dual‑chip design enables the spatial experiences on Apple
+                    Vision Pro. The
                     powerful M2 chip
                     simultaneously runs visionOS, executes advanced computer vision algorithms, and delivers stunning
                     graphics, all with incredible efficiency. And the brand-new R1 chip is specifically dedicated to
                     process input from the cameras, sensors, and microphones, streaming images to the displays within 12
                     milliseconds — for a virtually lag-free, real-time view of the world. </p>
-                <button class="bg-white text-black text-2xl py-2 px-8 font-medium rounded-full"> + Learn more about
+                <button class="bg-white text-black text-lg lg:text-2xl py-2 px-8 font-medium rounded-full mt-5"> + Learn
+                    more about
                     technology </button>
             </div>
         </div>
-        <div id="page-22" class="h-screen w-screen flex flex-col items-center justify-center gap-15">
-            <h4 class="font-semibold text-4xl"> Values </h4>
-            <h1 class="text-7xl text-center font-medium"> Designed to make <br> a difference. </h1>
-            <p class="text-xl text-center text-gray-500 font-medium">
+        <div id="page-22" class="h-screen w-full flex flex-col items-center justify-center gap-10 lg:gap-15 px-5">
+            <h4 class="font-semibold text-2xl lg:text-4xl"> Values </h4>
+            <h1 class="text-4xl lg:text-7xl text-center font-medium"> Designed to make <br class="hidden lg:block"> a
+                difference. </h1>
+            <p class="text-lg lg:text-xl text-center text-gray-500 font-medium">
                 <span class="text-black">Our values lead the way.</span> Apple Vision Pro was designed to help protect
-                your privacy and <br>keep you in control of your data. Its built‑in accessibility features are designed
-                to work <br>the way you do.
+                your privacy and <br class="hidden lg:block">keep you in control of your data. Its built‑in
+                accessibility features are designed
+                to work <br class="hidden lg:block">the way you do.
             </p>
-            <button class="bg-[#FF6A19] text-white text-2xl py-4 px-8 rounded-full font-medium learn-btn"> + Learn more about our
+            <button
+                class="bg-[#FF6A19] text-white text-lg lg:text-2xl py-3 px-6 lg:py-4 lg:px-8 rounded-full font-medium learn-btn max-w-[90vw] text-center">
+                + Learn more about our
                 values </button>
         </div>
-        <div id="page-23" class="h-screen w-11/12 mx-auto bg-[#F5F5F7] relative flex justify-between px-24 my-10">
-            <div id="pg-23-left" class="flex flex-col items-start text-start justify-center w-1/2 gap-5 px-12">
+        <div id="page-23"
+            class="min-h-screen lg:h-screen w-11/12 mx-auto bg-[#F5F5F7] relative flex flex-col lg:flex-row justify-between px-5 lg:px-24 py-10 lg:py-0 my-10">
+            <div id="pg-23-left"
+                class="flex flex-col items-center lg:items-start text-center lg:text-start justify-center w-full lg:w-1/2 gap-5 px-0 lg:px-12">
                 <img src="https://www.apple.com/v/apple-vision-pro/h/images/overview/routers/ar_logo__bmtaba6ckk76_large_2x.png"
                     alt="" class="h-12 w-12 object-cover">
-                <h2 class="text-6xl font-medium"> Use AR to view <br> Apple Vision Pro. </h2>
-                <p class="text-2xl text-gray-400 font-medium"> Open this page using Safari on <br> your iPhone or iPad.
+                <h2 class="text-3xl lg:text-6xl font-medium"> Use AR to view <br class="hidden lg:block"> Apple Vision
+                    Pro. </h2>
+                <p class="text-lg lg:text-2xl text-gray-400 font-medium"> Open this page using Safari on <br
+                        class="hidden lg:block"> your iPhone or iPad.
                 </p>
             </div>
             <img src="https://static.android.com.pl/uploads/2024/07/Apple-Vision-Pro-smartfon-Fot-Apple-zrzut-ekranu.jpg"
-                alt="" class="w-6/12 object-cover">
+                alt="" class="w-full lg:w-6/12 object-cover mt-10 lg:mt-0">
         </div>
-        <div id="page-24" class="h-screen w-11/12 mx-auto bg-[#F5F5F7] relative flex justify-between px-24 my-10">
-            <div id="pg-24-left" class="flex flex-col items-start text-start justify-center w-1/2 gap-5 px-12">
-                <h2 class="text-6xl font-medium"> Explore <br> Apple Vision Pro <br> accessories. <br> </h2>
-                <button class="text-2xl text-blue-500 border-none outline-none"> Shop > </button>
+        <div id="page-24"
+            class="min-h-screen lg:h-screen w-11/12 mx-auto bg-[#F5F5F7] relative flex flex-col lg:flex-row justify-between px-5 lg:px-24 py-10 lg:py-0 my-10">
+            <div id="pg-24-left"
+                class="flex flex-col items-center lg:items-start text-center lg:text-start justify-center w-full lg:w-1/2 gap-5 px-0 lg:px-12">
+                <h2 class="text-3xl lg:text-6xl font-medium"> Explore <br class="hidden lg:block"> Apple Vision Pro <br
+                        class="hidden lg:block"> accessories. <br class="hidden lg:block"> </h2>
+                <button class="text-xl lg:text-2xl text-blue-500 border-none outline-none"> Shop > </button>
             </div>
             <img src="https://www.apple.com/v/apple-vision-pro/h/images/overview/routers/accessories__et6yc9y3xvu6_large_2x.jpg"
-                alt="" class="w-6/12 h-10/12 my-auto">
+                alt="" class="w-full lg:w-6/12 h-10/12 my-auto mt-10 lg:mt-auto">
         </div>
         <div id="page-25"
-            class="h-screen w-11/12 bg-[#f5f5f7] relative flex flex-col items-center mx-auto py-10 gap-10">
+            class="min-h-[50vh] lg:h-screen w-11/12 bg-[#f5f5f7] relative flex flex-col items-center mx-auto py-10 gap-5 lg:gap-10">
             <img src="https://www.apple.com/v/apple-vision-pro/h/images/overview/routers/developers__bxrd1uafspsi_large_2x.png"
-                alt="" class="w-6/12 object-cover">
-            <h2 class="text-6xl font-medium text-center"> An all‑new platform. <br>
+                alt="" class="w-10/12 lg:w-6/12 object-cover">
+            <h2 class="text-3xl lg:text-6xl font-medium text-center"> An all‑new platform. <br class="hidden lg:block">
                 An all‑new world for developers. </h2>
-            <p class="text-2xl text-gray-500 font-medium text-center"> The possibilities for what developers can dream
-                up and build for Apple Vision Pro are <br> endless. And with familiar tools and frameworks like Xcode,
-                SwiftUI, RealityKit, and ARKit, <br> as well as support for Unity and the 3D-content preparation app
-                Reality Composer Pro, <br> developers have everything they need to create amazing spatial experiences.
+            <p class="text-base lg:text-2xl text-gray-500 font-medium text-center px-5"> The possibilities for what
+                developers can dream
+                up and build for Apple Vision Pro are <br class="hidden lg:block"> endless. And with familiar tools and
+                frameworks like Xcode,
+                SwiftUI, RealityKit, and ARKit, <br class="hidden lg:block"> as well as support for Unity and the
+                3D-content preparation app
+                Reality Composer Pro, <br class="hidden lg:block"> developers have everything they need to create
+                amazing spatial experiences.
             </p>
-            <a href="#" class="text-blue-500 text-2xl border-b-0 hover:border-b-1 border-b-blue-800"> Learn more about
+            <a href="#"
+                class="text-blue-500 text-lg lg:text-2xl border-b-0 hover:border-b-1 border-b-blue-800 text-center mt-5">
+                Learn more about
                 developing for visionOS </a>
         </div>
-        <footer class="h-screen w-screen bg-gray-100 mt-20 px-20 py-10  text-xl">
+        <footer class="min-h-[50vh] w-full bg-gray-100 mt-20 px-5 lg:px-20 py-10 text-base lg:text-xl">
             <p class="border-b-1 border-b-gray-500 mb-5 pb-2"> <i class="ri-apple-fill"></i> > Apple Vision Pro </p>
-            <div id="footer-cols" class="flex justify-between">
+            <div id="footer-cols" class="flex flex-col lg:flex-row justify-between gap-10 lg:gap-0">
                 <div id="c1">
                     <ol class="text-gray-500 mb-5 flex flex-col items-start gap-1 text-sm"> <span
                             class="font-medium text-black"> Shop and Learn </span>
@@ -430,9 +508,11 @@
                     </ol>
                 </div>
             </div>
-            <div id="copyright" class="border-t-1 border-t-gray-500 flex justify-between items-center text-sm text-gray-500 pt-4">
-                <p> Copyright © 2025 Apple Inc. All rights reserved. </p>
-                <div id="links" class="flex items-center gap-5 -translate-x-12">
+            <div id="copyright"
+                class="border-t-1 border-t-gray-500 flex flex-col lg:flex-row justify-between items-center text-sm text-gray-500 pt-4 gap-5 lg:gap-0">
+                <p class="text-center lg:text-left"> Copyright © 2025 Apple Inc. All rights reserved. </p>
+                <div id="links"
+                    class="flex flex-wrap items-center justify-center gap-2 lg:gap-5 translate-x-0 lg:-translate-x-12">
                     <p> Privacy Policy </p> |
                     <p> Terms of Use </p> |
                     <p> Sales and Refunds </p> |
@@ -441,7 +521,8 @@
                 </div>
                 <p> India </p>
             </div>
-            <h1 class="text-3xl font-medium text-red-600 mt-10 text-center"> This website is a learning-based clone, not official. No harm, defamation, or violation intended. </h1>
+            <h1 class="text-xl lg:text-3xl font-medium text-red-600 mt-10 text-center"> This website is a learning-based
+                clone, not official. No harm, defamation, or violation intended. </h1>
         </footer>
     </div>
 

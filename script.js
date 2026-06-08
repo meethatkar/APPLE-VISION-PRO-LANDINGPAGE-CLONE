@@ -5,7 +5,9 @@ function locomotive() {
 
   const locoScroll = new LocomotiveScroll({
     el: document.querySelector("#main"),
-    smooth: true
+    smooth: true,
+    smartphone: { smooth: true },
+    tablet: { smooth: true }
   });
   // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
   locoScroll.on("scroll", ScrollTrigger.update);
@@ -692,6 +694,7 @@ textDivContent = textDiv.textContent;
 setTimeout(() => {
   document.querySelector("#disclaimer").style.zIndex = "0";
   document.querySelector("#disclaimer").style.opacity = "0";
+  document.body.classList.remove("overflow-hidden");
   return;
 }, 5000);
 }
